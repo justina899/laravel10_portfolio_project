@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers\Home;
 
-//require './vendor/autoload.php';
-
 use App\Http\Controllers\Controller;
 use App\Models\HomeSlide;
 use Illuminate\Http\Request;
