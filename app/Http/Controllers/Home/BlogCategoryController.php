@@ -11,11 +11,11 @@ class BlogCategoryController extends Controller
     public function AllBlogCategory(){
         $blogcategory = BlogCategory::latest()->get();
         return view('admin.blog_category.blog_category_all', compact('blogcategory'));
-    } //Method end
+    } //End method
 
     public function AddBlogCategory(){
         return view('admin.blog_category.blog_category_add');
-    } //Method end
+    } //End method
 
     public function StoreBlogCategory(Request $request){
         $request->validate([
@@ -35,12 +35,12 @@ class BlogCategoryController extends Controller
         );
 
         return redirect()->route('all.blog.category')->with($notification);
-    } //Method end
+    } //End method
 
     public function EditBlogCategory($id){
         $blogcategory = BlogCategory::findOrFail($id);
         return view('admin.blog_category.blog_category_edit', compact('blogcategory'));
-    } //Method end
+    } //End method
 
     public function UpdateBlogCategory(Request $request, $id){
         BlogCategory::findOrFail($id)->update([
@@ -53,7 +53,7 @@ class BlogCategoryController extends Controller
         );
 
         return redirect()->route('all.blog.category')->with($notification);
-    } //Method end
+    } //End method
 
     public function DeleteBlogCategory($id){
         BlogCategory::findOrFail($id)->delete();
@@ -64,6 +64,6 @@ class BlogCategoryController extends Controller
         );
 
         return redirect()->back()->with($notification);
-    } //Method end
+    } //End method
 
 }

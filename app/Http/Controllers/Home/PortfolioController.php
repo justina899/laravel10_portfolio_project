@@ -64,7 +64,6 @@ class PortfolioController extends Controller
     public function UpdatePortfolio(Request $request){
         $portfolio_id = $request->id;
 
-
         if ($request->file('portfolio_image')){
             $manager = new ImageManager(new Driver());
             $name_gen = hexdec(uniqid()).'.'.$request->file('portfolio_image')->getClientOriginalExtension();
