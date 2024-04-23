@@ -18,13 +18,7 @@ class BlogCategoryController extends Controller
     } //End method
 
     public function StoreBlogCategory(Request $request){
-        $request->validate([
-            'blog_category' => 'required',
-        ], [
-            //validation error messages
-            'blog_category.required' => 'Blog category name is required',
-        ]);
-
+        
         BlogCategory::insert([
             'blog_category' => $request->blog_category,
         ]);
