@@ -1,6 +1,10 @@
 @extends('frontend.main_master')
 @section('main')
 
+@section('title')
+Blog | My learning website
+@endsection
+
 <main>
 
     <!-- breadcrumb-area -->

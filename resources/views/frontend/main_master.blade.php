@@ -5,7 +5,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Rasalina - Personal Portfolio</title>
+        <title>@yield('title')</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -50,9 +50,6 @@
         <!-- Footer-area -->
         @include('frontend.body.footer')
         <!-- Footer-area-end -->
-
-
-
 
 		<!-- JS here -->
         <script src="{{asset('frontend/assets/js/vendor/jquery-3.6.0.min.js')}}"></script>
