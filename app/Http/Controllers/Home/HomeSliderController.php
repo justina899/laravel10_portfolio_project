@@ -14,6 +14,10 @@ use Intervention\Image\Laravel\Facades\Image;
 
 class HomeSliderController extends Controller
 {
+    public function HomeMain(){
+        return view('frontend.index');
+    } //End mehtod 
+
     public function HomeSlider(){
         $homeslide = HomeSlide::find(1);
         return view('admin.home_slide.home_slide_all', compact('homeslide'));

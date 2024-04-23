@@ -23,9 +23,9 @@ use App\Http\Controllers\Home\ContactController;
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.index');
-});
+// Route::get('/', function () {
+//     return view('frontend.index');
+// });
 
 //Admin all routes
 Route::controller(AdminController::class)->group(function () {
@@ -41,6 +41,7 @@ Route::controller(AdminController::class)->group(function () {
 Route::controller(HomeSliderController::class)->group(function () {
     Route::get('/home/slide', 'HomeSlider')->name('home.slide');
     Route::post('/update/slider', 'UpdateSlider')->name('update.slider');
+    Route::get('/', 'HomeMain')->name('home');
 });
 
 //About page all routes
