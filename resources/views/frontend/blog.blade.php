@@ -6,7 +6,6 @@ Blog | My learning website
 @endsection
 
 <main>
-
     <!-- breadcrumb-area -->
     <section class="breadcrumb__wrap">
         <div class="container custom-container">
@@ -37,7 +36,6 @@ Blog | My learning website
     </section>
     <!-- breadcrumb-area-end -->
 
-
     <!-- blog-area -->
     <section class="standard__blog">
         <div class="container">
@@ -65,13 +63,7 @@ Blog | My learning website
                     @endforeach
                     
                     <div class="pagination-wrap">
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination">
-
-                                <li class="page-item"><a class="page-link" href="#"><i class="far fa-long-arrow-left"></i></a></li>
-                                
-                            </ul>
-                        </nav>
+                        {{$allblogs->links('vendor.pagination.custom')}}
                     </div>
                 </div>
                 <div class="col-lg-4">

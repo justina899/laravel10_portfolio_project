@@ -1,7 +1,7 @@
 @php 
-
-@endphp
 $route = Route::current()->getName();
+@endphp
+
 <header>
             <div id="sticky-header" class="menu__area transparent-header">
                 <div class="container custom-container">
