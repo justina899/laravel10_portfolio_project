@@ -6,7 +6,6 @@ Portfolio | My learning website
 @endsection
 
 <main>
-
     <!-- breadcrumb-area -->
     <section class="breadcrumb__wrap">
         <div class="container custom-container">
@@ -48,15 +47,15 @@ Portfolio | My learning website
                         <div class="col-lg-6 col-md-10">
                             <div class="portfolio__inner__thumb">
                                 <a href="portfolio-details.html">
-                                    <img src="{{asset($item->portfolio_image)}}" alt="">
+                                    <img src="{{ asset($item->portfolio_image) }}" alt="">
                                 </a>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-10">
                             <div class="portfolio__inner__content">
-                                <h2 class="title"><a href="{{route('portfolio.details', $item->id)}}">{{$item->portfolio_title}}</a></h2>
+                                <h2 class="title"><a href="{{ route('portfolio.details', $item->id) }}">{{ $item->portfolio_title }}</a></h2>
                                 <p>{!!Str::limit($item->portfolio_description, 200)!!}</p>
-                                <a href="{{route('portfolio.details', $item->id)}}" class="link">View Case Study</a>
+                                <a href="{{ route('portfolio.details', $item->id) }}" class="link">View Case Study</a>
                             </div>
                         </div>
                     </div>
@@ -67,7 +66,6 @@ Portfolio | My learning website
         </div>
     </section>
     <!-- portfolio-area-end -->
-
 
     <!-- contact-area -->
     <section class="homeContact homeContact__style__two">
@@ -100,7 +98,5 @@ Portfolio | My learning website
         </div>
     </section>
     <!-- contact-area-end -->
-
 </main>
-
 @endsection

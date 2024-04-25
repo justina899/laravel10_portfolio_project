@@ -1,5 +1,6 @@
 @extends('admin/admin_master')
 @section('admin')
+
 <div class="page-content">
     <div class="container-fluid">
         <!-- start page title -->
@@ -28,16 +29,18 @@
 
                             <tbody>
                                 @php($i = 1)
+
                                 @foreach($allMultiImage as $item)
                                 <tr>
-                                    <td>{{$i++}}</td>
-                                    <td><img src="{{asset($item->multi_image)}}" style="width: 60px; height: 50px"></td>
+                                    <td>{{ $i++ }}</td>
+                                    <td><img src="{{ asset($item->multi_image) }}" style="width: 60px; height: 50px"></td>
                                     <td>
-                                        <a href="{{route('edit.multi.image', $item->id)}}" class="btn btn-info sm" title="Edit data"><i class="fas fa-edit"></i></a>
-                                        <a href="{{route('delete.multi.image', $item->id)}}" class="btn btn-danger sm" title="Delete data" id="delete"><i class="fas fa-trash-alt"></i></a>
+                                        <a href="{{ route('edit.multi.image', $item->id) }}" class="btn btn-info sm" title="Edit data"><i class="fas fa-edit"></i></a>
+                                        <a href="{{ route('delete.multi.image', $item->id) }}" class="btn btn-danger sm" title="Delete data" id="delete"><i class="fas fa-trash-alt"></i></a>
                                     </td>
                                 </tr>
                                 @endforeach
+                                
                             </tbody>
                         </table>
                     </div>

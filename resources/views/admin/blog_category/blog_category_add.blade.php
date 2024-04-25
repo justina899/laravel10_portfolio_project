@@ -11,14 +11,13 @@
 
                         <h4 class="card-title">Add blog category page</h4><br>
 
-                            <form method="post" id="myForm" action="{{route('store.blog.category')}}">
+                            <form method="post" id="myForm" action="{{ route('store.blog.category') }}">
                             @csrf
 
                                 <div class="row mb-3">
                                     <label for="example-text-input" class="col-sm-2 col-form-label">Blog category name</label>
                                     <div class="form-group col-sm-10">
                                         <input class="form-control" name="blog_category" type="text" id="example-text-input">
-                                        
                                     </div>
                                 </div>
                                 <!-- end row -->

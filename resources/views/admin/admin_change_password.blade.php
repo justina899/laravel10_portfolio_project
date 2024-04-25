@@ -12,12 +12,12 @@
 
                             @if(count($errors))
                                 @foreach($errors->all() as $error)
-                                    <p class="alert alert-danger alert-dismissible fade show">{{$error}}</p>
+                                    <p class="alert alert-danger alert-dismissible fade show">{{ $error }}</p>
                                 @endforeach
 
                             @endif
 
-                            <form method="post" action="{{route('update.password')}}">
+                            <form method="post" action="{{ route('update.password') }}">
                             @csrf
                                 <div class="row mb-3">
                                     <label for="example-text-input" class="col-sm-2 col-form-label">Old password</label>

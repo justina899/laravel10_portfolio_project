@@ -11,12 +11,12 @@
 
                         <h4 class="card-title">Edit profile page</h4>
 
-                            <form method="post" action="{{route('store.profile')}}" enctype="multipart/form-data">
+                            <form method="post" action="{{ route('store.profile') }}" enctype="multipart/form-data">
                             @csrf
                                 <div class="row mb-3">
                                     <label for="example-text-input" class="col-sm-2 col-form-label">Name</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" name="name" type="text" value="{{$editData->name}}" id="example-text-input">
+                                        <input class="form-control" name="name" type="text" value="{{ $editData->name }}" id="example-text-input">
                                     </div>
                                 </div>
                                 <!-- end row -->
@@ -24,7 +24,7 @@
                                 <div class="row mb-3">
                                     <label for="example-text-input" class="col-sm-2 col-form-label">User email</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" name="email" type="email" value="{{$editData->email}}" id="example-text-input">
+                                        <input class="form-control" name="email" type="email" value="{{ $editData->email }}" id="example-text-input">
                                     </div>
                                 </div>
                                 <!-- end row -->
@@ -32,7 +32,7 @@
                                 <div class="row mb-3">
                                     <label for="example-text-input" class="col-sm-2 col-form-label">Username</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" name="username" type="text" value="{{$editData->username}}" id="example-text-input">
+                                        <input class="form-control" name="username" type="text" value="{{ $editData->username }}" id="example-text-input">
                                     </div>
                                 </div>
                                 <!-- end row -->
@@ -48,7 +48,7 @@
                                 <div class="row mb-3">
                                 <label for="example-text-input" class="col-sm-2 col-form-label"></label>
                                     <div class="col-sm-10">
-                                        <img id="showImage" class="rounded avatar-lg" src="{{(!empty($editData->profile_image))? url('upload/admin_images/'.$editData->profile_image):url('upload/no_image.jpg')}}" alt="Card image cap">
+                                        <img id="showImage" class="rounded avatar-lg" src="{{ (!empty($editData->profile_image)) ? url('upload/admin_images/'.$editData->profile_image) : url('upload/no_image.jpg') }}" alt="Card image cap">
                                     </div>
                                 </div>
                                 <!-- end row -->

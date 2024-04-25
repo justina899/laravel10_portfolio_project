@@ -11,17 +11,17 @@
 
                         <h4 class="card-title">Portfolio edit page</h4><br>
 
-                            <form method="post" action="{{route('update.portfolio')}}" enctype="multipart/form-data">
+                            <form method="post" action="{{ route('update.portfolio') }}" enctype="multipart/form-data">
                             @csrf
 
-                                <input type="hidden" name="id" value="{{$portfolio->id}}">
+                                <input type="hidden" name="id" value="{{ $portfolio->id }}">
 
                                 <div class="row mb-3">
                                     <label for="example-text-input" class="col-sm-2 col-form-label">Portfolio name</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" name="portfolio_name" value="{{$portfolio->portfolio_name}}" type="text" id="example-text-input">
+                                        <input class="form-control" name="portfolio_name" value="{{ $portfolio->portfolio_name }}" type="text" id="example-text-input">
                                         @error('portfolio_name')
-                                            <span class="text-danger">{{$message}}</span>
+                                            <span class="text-danger">{{ $message }}</span>
                                         @enderror
                                     </div>
                                 </div>
@@ -30,9 +30,9 @@
                                 <div class="row mb-3">
                                     <label for="example-text-input" class="col-sm-2 col-form-label">Portfolio title</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" name="portfolio_title" value="{{$portfolio->portfolio_title}} type="text" id="example-text-input">
+                                        <input class="form-control" name="portfolio_title" value="{{ $portfolio->portfolio_title }}" type="text" id="example-text-input">
                                         @error('portfolio_title')
-                                            <span class="text-danger">{{$message}}</span>
+                                            <span class="text-danger">{{ $message }}</span>
                                         @enderror
                                     </div>
                                 </div>
@@ -41,7 +41,7 @@
                                 <div class="row mb-3">
                                     <label for="example-text-input" class="col-sm-2 col-form-label">Portfolio description</label>
                                     <div class="col-sm-10">
-                                        <textarea id="elm1" name="portfolio_description">{{$portfolio->portfolio_description}}</textarea>
+                                        <textarea id="elm1" name="portfolio_description">{{ $portfolio->portfolio_description }}</textarea>
                                     </div>
                                 </div>
                                 <!-- end row -->
@@ -57,7 +57,7 @@
                                 <div class="row mb-3">
                                 <label for="example-text-input" class="col-sm-2 col-form-label"></label>
                                     <div class="col-sm-10">
-                                        <img id="showImage" class="rounded avatar-lg" src="{{asset('$portfolio->portfolio_image')}}" alt="Card image cap">
+                                        <img id="showImage" class="rounded avatar-lg" src="{{ asset('$portfolio->portfolio_image') }}" alt="Card image cap">
                                     </div>
                                 </div>
                                 <!-- end row -->
@@ -82,6 +82,4 @@
     });
 </script>
 
-
-    
 @endsection

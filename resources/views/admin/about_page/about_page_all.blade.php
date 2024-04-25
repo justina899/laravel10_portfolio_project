@@ -11,15 +11,15 @@
 
                         <h4 class="card-title">About page</h4><br>
 
-                            <form method="post" action="{{route('update.about')}}" enctype="multipart/form-data">
+                            <form method="post" action="{{ route('update.about') }}" enctype="multipart/form-data">
                             @csrf
 
-                                <input type="hidden" name="id" value="{{$aboutpage->id}}">
+                                <input type="hidden" name="id" value="{{ $aboutpage->id }}">
 
                                 <div class="row mb-3">
                                     <label for="example-text-input" class="col-sm-2 col-form-label">Title</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" name="title" type="text" value="{{$aboutpage->title}}" id="example-text-input">
+                                        <input class="form-control" name="title" type="text" value="{{ $aboutpage->title }}" id="example-text-input">
                                     </div>
                                 </div>
                                 <!-- end row -->
@@ -27,7 +27,7 @@
                                 <div class="row mb-3">
                                     <label for="example-text-input" class="col-sm-2 col-form-label">Short title</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" name="short_title" type="text" value="{{$aboutpage->short_title}}" id="example-text-input">
+                                        <input class="form-control" name="short_title" type="text" value="{{ $aboutpage->short_title }}" id="example-text-input">
                                     </div>
                                 </div>
                                 <!-- end row -->
@@ -35,7 +35,7 @@
                                 <div class="row mb-3">
                                     <label for="example-text-input" class="col-sm-2 col-form-label">Short description</label>
                                     <div class="col-sm-10">
-                                        <textarea required="" name="short_description" class="form-control" rows="5">{{$aboutpage->short_description}}</textarea>
+                                        <textarea required="" name="short_description" class="form-control" rows="5">{{ $aboutpage->short_description }}</textarea>
                                     </div>
                                 </div>
                                 <!-- end row -->
@@ -59,10 +59,11 @@
                                 <div class="row mb-3">
                                 <label for="example-text-input" class="col-sm-2 col-form-label"></label>
                                     <div class="col-sm-10">
-                                        <img id="showImage" class="rounded avatar-lg" src="{{(!empty($aboutpage->about_image))? url($aboutpage->about_image):url('upload/no_image.jpg')}}" alt="Card image cap">
+                                        <img id="showImage" class="rounded avatar-lg" src="{{ (!empty($aboutpage->about_image)) ? url($aboutpage->about_image) : url('upload/no_image.jpg') }}" alt="Card image cap">
                                     </div>
                                 </div>
                                 <!-- end row -->
+
                                 <input type="submit" class="btn btn-info waves-effect waves-light" value="Update about page">
                             </form>
                     </div>
@@ -84,6 +85,4 @@
     });
 </script>
 
-
-    
 @endsection

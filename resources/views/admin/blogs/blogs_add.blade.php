@@ -18,7 +18,7 @@
 
                         <h4 class="card-title">Add blog page</h4><br>
 
-                            <form method="post" action="{{route('store.blog')}}" enctype="multipart/form-data">
+                            <form method="post" action="{{ route('store.blog') }}" enctype="multipart/form-data">
                             @csrf
 
                                 <div class="row mb-3">
@@ -28,7 +28,7 @@
                                             <option selected="">Open this select menu</option>
 
                                             @foreach($categories as $cat)
-                                            <option value="{{$cat->id}}">{{$cat->blog_category}}</option>
+                                            <option value="{{ $cat->id }}">{{ $cat->blog_category }}</option>
                                             @endforeach
 
                                         </select>
@@ -41,7 +41,7 @@
                                     <div class="col-sm-10">
                                         <input class="form-control" name="blog_title" type="text" id="example-text-input">
                                         @error('blog_title')
-                                            <span class="text-danger">{{$message}}</span>
+                                            <span class="text-danger">{{ $message }}</span>
                                         @enderror
                                     </div>
                                 </div>
@@ -51,7 +51,6 @@
                                     <label for="example-text-input" class="col-sm-2 col-form-label">Blog tag</label>
                                     <div class="col-sm-10">
                                         <input class="form-control" name="blog_tags" value="home, tech" type="text" data-role="tagsinput">
-                                        
                                     </div>
                                 </div>
                                 <!-- end row -->
@@ -75,7 +74,7 @@
                                 <div class="row mb-3">
                                 <label for="example-text-input" class="col-sm-2 col-form-label"></label>
                                     <div class="col-sm-10">
-                                        <img id="showImage" class="rounded avatar-lg" src="{{url('upload/no_image.jpg')}}" alt="Card image cap">
+                                        <img id="showImage" class="rounded avatar-lg" src="{{ url('upload/no_image.jpg') }}" alt="Card image cap">
                                     </div>
                                 </div>
                                 <!-- end row -->

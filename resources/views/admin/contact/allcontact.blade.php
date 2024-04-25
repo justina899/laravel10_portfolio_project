@@ -36,13 +36,13 @@
 
                                 @foreach($contact as $item)
                                 <tr>
-                                    <td>{{$i++}}</td>
-                                    <td>{{$item->name}}</td>
-                                    <td>{{$item->email}}</td>
-                                    <td>{{$item->phone}}</td>
-                                    <td>{{Carbon\Carbon::parse($item->created_at)->diffForHumans()}}</td>
+                                    <td>{{ $i++ }}</td>
+                                    <td>{{ $item->name }}</td>
+                                    <td>{{ $item->email }}</td>
+                                    <td>{{ $item->phone }}</td>
+                                    <td>{{ Carbon\Carbon::parse($item->created_at)->diffForHumans() }}</td>
                                     <td>
-                                        <a href="{{route('delete.message', $item->id)}}" class="btn btn-danger sm" title="Delete data" id="delete"><i class="fas fa-trash-alt"></i></a>
+                                        <a href="{{ route('delete.message', $item->id) }}" class="btn btn-danger sm" title="Delete data" id="delete"><i class="fas fa-trash-alt"></i></a>
                                     </td>
                                 </tr>
                                 @endforeach

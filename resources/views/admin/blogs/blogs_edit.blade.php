@@ -18,10 +18,10 @@
 
                         <h4 class="card-title">Edit blog page</h4><br>
 
-                            <form method="post" action="{{route('update.blog')}}" enctype="multipart/form-data">
+                            <form method="post" action="{{ route('update.blog') }}" enctype="multipart/form-data">
                             @csrf
 
-                                <input type="hidden" name="id" value="{{$blogs->id}}">
+                                <input type="hidden" name="id" value="{{ $blogs->id }}">
 
                                 <div class="row mb-3">
                                     <label for="example-text-input" class="col-sm-2 col-form-label">Blog category name</label>
@@ -30,7 +30,7 @@
                                             <option selected="">Open this select menu</option>
 
                                             @foreach($categories as $cat)
-                                            <option value="{{$cat->id}}"{{$cat->id == $blogs->blog_category_id ? 'selected' : ''}}>{{$cat->blog_category}}</option>
+                                            <option value="{{ $cat->id }}" {{ $cat->id == $blogs->blog_category_id ? 'selected' : '' }}> {{ $cat->blog_category }}</option>
                                             @endforeach
 
                                         </select>
@@ -41,7 +41,7 @@
                                 <div class="row mb-3">
                                     <label for="example-text-input" class="col-sm-2 col-form-label">Blog title</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" name="blog_title" value="{{$blogs->blog_title}}" type="text" id="example-text-input">
+                                        <input class="form-control" name="blog_title" value="{{ $blogs->blog_title }}" type="text" id="example-text-input">
                                     </div>
                                 </div>
                                 <!-- end row -->
@@ -49,8 +49,7 @@
                                 <div class="row mb-3">
                                     <label for="example-text-input" class="col-sm-2 col-form-label">Blog tag</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" name="blog_tags" value="{{$blogs->blog_tags}}" type="text" data-role="tagsinput">
-                                        
+                                        <input class="form-control" name="blog_tags" value="{{ $blogs->blog_tags }}" type="text" data-role="tagsinput">
                                     </div>
                                 </div>
                                 <!-- end row -->
@@ -58,7 +57,7 @@
                                 <div class="row mb-3">
                                     <label for="example-text-input" class="col-sm-2 col-form-label">Blog description</label>
                                     <div class="col-sm-10">
-                                        <textarea id="elm1" name="blog_description">{{$blogs->blog_description}}</textarea>
+                                        <textarea id="elm1" name="blog_description">{{ $blogs->blog_description }}</textarea>
                                     </div>
                                 </div>
                                 <!-- end row -->
@@ -74,7 +73,7 @@
                                 <div class="row mb-3">
                                 <label for="example-text-input" class="col-sm-2 col-form-label"></label>
                                     <div class="col-sm-10">
-                                        <img id="showImage" class="rounded avatar-lg" src="{{asset($blogs->blog_image)}}" alt="Card image cap">
+                                        <img id="showImage" class="rounded avatar-lg" src="{{ asset($blogs->blog_image) }}" alt="Card image cap">
                                     </div>
                                 </div>
                                 <!-- end row -->
@@ -99,6 +98,4 @@
     });
 </script>
 
-
-    
 @endsection

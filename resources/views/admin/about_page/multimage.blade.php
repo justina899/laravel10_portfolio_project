@@ -11,7 +11,7 @@
 
                         <h4 class="card-title">Add multi image</h4><br>
 
-                            <form method="post" action="{{route('store.multi.image')}}" enctype="multipart/form-data">
+                            <form method="post" action="{{ route('store.multi.image') }}" enctype="multipart/form-data">
                             @csrf
 
                                 <div class="row mb-3">
@@ -25,7 +25,7 @@
                                 <div class="row mb-3">
                                 <label for="example-text-input" class="col-sm-2 col-form-label"></label>
                                     <div class="col-sm-10">
-                                        <img id="showImage" class="rounded avatar-lg" src="{{url('upload/no_image.jpg')}}" alt="Card image cap">
+                                        <img id="showImage" class="rounded avatar-lg" src="{{ url('upload/no_image.jpg') }}" alt="Card image cap">
                                     </div>
                                 </div>
                                 <!-- end row -->
